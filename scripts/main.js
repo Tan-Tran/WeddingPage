@@ -1,0 +1,1 @@
+const numberOfDotGallery = 6;

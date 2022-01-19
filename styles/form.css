@@ -1,0 +1,113 @@
+
+.register-form{
+    width: 100%;
+}
+
+.register-form .form-group{
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+::placeholder{
+    color: #555555;
+    opacity: 0.55;
+}
+
+.register-form .form-group input{
+    width: 100%;
+    height: 50px;
+    border: 2px solid #fff;
+    background: transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto Slab";
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    outline: none;
+}
+
+.register-form .radio{
+    text-align: center;
+}
+
+.register-form .form-group .error-description{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+    /* display: inline-block; */
+    display: none;
+}
+
+.register-form .form-group input[type="radio"]{
+    width: 12.8px;
+    height: 12.8px;
+    display: inline-block;
+}
+
+.register-form .form-group input:focus{
+    border:2px solid rgb(222, 103, 95);
+    background: #ffffff;
+}
+
+.register-form .form-group textarea{
+    width: 100%;  
+    height: 150px;  
+    background: transparent;
+    border: 2px solid #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto Slab";
+    line-height: 1.428571429;
+    outline: none;
+    display: block;
+}
+
+.register-form .form-group textarea:focus{
+    border:2px solid rgb(222, 103, 95);
+    background: #ffffff;
+}
+
+.register-form .form-group button{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    height: 34px;
+    background-color: #428bca;
+    border: 1px solid #357ebd;
+    border-bottom: 3px solid #464D9C;
+}
+
+#register-wedding-form-success{
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid;
+    border-radius: 6px;
+    background-color: rgb(223, 240, 216);
+    border-color: rgb(214, 233, 198);
+    margin-bottom: 20px;
+    color: rgb(70, 136, 71);
+    display: none;
+}
+
+#register-wedding-form-success span{
+    font-weight: bold;
+}
+
+#close-register-success-inform{
+    float: right;
+    background: transparent;
+    border: none;
+    opacity: 0.3;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 22.85px;
+}
+
+#close-register-success-inform:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}

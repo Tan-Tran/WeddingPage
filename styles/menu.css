@@ -1,0 +1,105 @@
+#menu{
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 260px;
+    height: 100%;
+    z-index: 10;
+    transition: all 0.4s;
+}
+
+#menu a{
+    margin-left: 20px;
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.1em;
+}
+
+#menu a:hover{
+    color: #ddd;
+}
+
+/* menu-nav */
+
+#menu-nav{
+    position: absolute;
+    background-color: #de675f;
+    top: 0;
+    height: 100%;
+    left: 60px;
+    width: 200px;
+}
+
+#menu-nav-item{
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+#menu-nav-item h1{
+    text-align: center;
+}
+
+/* menu-icon */
+
+#menu-icon{
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    background-color:rgba(222, 103, 95, 0.25);
+    color: white;
+    cursor: pointer;
+}
+
+#menu-icon:hover{
+    color: #ffffff;
+    background: rgba(0,0,0,0.2);
+}
+
+/* menu-nav contains 2 part: menu-nav-items and nav-icon */
+
+/* menu-nav-items */
+
+#menu-nav-item{
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;    
+}
+
+#menu-nav-item h1{
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#menu-nav-item h1 a:hover{
+    color:#f85c37;
+}
+
+#menu-nav-item h1 a{
+    letter-spacing: 0.15em;
+    font-size: 16px;
+    font-family: 'Raleway';
+}
+
+#menu-nav-item a{
+    width: 180px;
+}
+
+#menu-nav a > i{
+    float: left;
+    width: 25px;
+    font-size: 14px;
+    line-height: 40px;
+    margin: 25px 2px;
+}

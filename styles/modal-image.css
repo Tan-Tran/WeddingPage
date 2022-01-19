@@ -1,0 +1,109 @@
+.modal-photostack-overlay{  
+    position: fixed;
+    background: #0b0b0b;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    opacity: 0.8;
+    overflow: hidden;
+    display: none;
+    z-index: 200;
+}
+
+.modal-photostack-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: none;
+    padding: 0 8px;
+    z-index: 201;
+}
+
+.modal-photostack-container .pre-btn, .next-btn{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+    z-index: 203;
+}
+
+.modal-photostack-container .pre-btn{
+    left: 0;
+}
+
+.modal-photostack-container .next-btn{
+    right: 0;
+}
+
+.modal-photostack-container .modal-photostack-layout-above{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.modal-photostack-content{
+    position: absolute;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    z-index: 203;
+}
+
+.modal-photostack-content img{
+    display: block;
+    padding: 40px 0 40px;
+    cursor: pointer;
+}
+
+.modal-photostack-content .close-btn{
+    width: 100%;
+    position: absolute;
+    color: white;
+    text-align: right;
+    background: transparent;
+    height: 44px;
+    line-height: 44px;
+    border: none;
+    font-size: 16px;
+    opacity: 0.65;
+    font-weight: 500;
+    padding-right: 1px;
+    padding-top: 1px;
+    cursor: zoom-out;
+}
+
+.modal-photostack-content .close-btn:hover{
+    opacity: 1;
+}
+
+.modal-photostack-content .imge-counter{
+    position: absolute;
+    margin-top: -36px;
+    left: 0;
+    width: 100%;
+    text-align: right;
+    color: #cccccc;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.modal-photostack-content .preloader-title{
+    width: 100%;
+    text-align: center;
+    color: #cccccc;
+    display: none;
+}

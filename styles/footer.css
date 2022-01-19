@@ -1,0 +1,16 @@
+.footer{
+    background-color: #2f2f2f;
+}
+
+.footer .row{
+    justify-content: flex-end;
+}
+
+.footer-content{
+    padding: 10px 0px;
+}
+
+.footer-content span a{
+    text-decoration: none;
+    color: #f85c37;
+}

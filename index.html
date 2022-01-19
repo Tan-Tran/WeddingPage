@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="stylesheet" href="styles/menu.css"/>
+    <link rel="stylesheet" href="styles/footer.css"/>
+    <link rel="stylesheet" href="styles/form.css"/>
+    <link rel="stylesheet" href="styles/modal-image.css"/>
+    <link rel="stylesheet" href="styles/common.css"/>
+    <link rel="stylesheet" href="styles/responsive.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&family=Pacifico&family=Raleway:wght@100;300;400;600;700;800;900;950&family=Roboto+Slab:wght@100;300;400;600;700;800;900;950&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <!-- Model Image PhotoStack -->
+        <div class="modal-photostack-overlay" ></div>
+        <div class="modal-photostack-container">
+            <div class="modal-photostack-layout-above"></div>
+            <div class="modal-photostack-content">
+                <button class="close-btn" >&#10006</button>
+                <img src = "" class="image-modal-photostack">
+                <div class="imge-counter"></div>
+                <div class="preloader-title"></div>
+            </div>
+            <button title="Previous (Left arrow key)" class="pre-btn" onclick="nextModalImage(-1)">❮</button>
+            <button title="Next (Right arrow key)" class="next-btn" onclick="nextModalImage(1)">❯</button>
+        </div>
+        <!-- Menu-->
+        <div id ="menu">
+            <div id="menu-nav">
+                <div id="menu-nav-item">
+                    <h1><a href="#">EVER AFTER</a></h1>
+                    <a href="#">HOME</a>
+                    <a href="#">OUR LOVE STORY</a>
+                    <a href="#">GALLERY</a>
+                    <a href="#">EVENTS</a>
+                    <a href="#">RSVP</a>
+                    <a href="#">GIFTS</a>
+                </div>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-envelope"></i></a>
+            </div>
+            <div id="menu-icon">
+                <i class="fa fa-heart"></i>
+            </div>
+        </div>
+        <!-- Slider -->
+        <div class="wedding-image-slider">
+            <div class="container">
+                <br>
+                <h1>Jessie <span>&</span> James</h1>
+                <h2>are getting married!</h2>                          
+            </div>
+            <div class="wedding-image-dot-background"></div>
+            <div class="wedding-image-slideshow ">
+                <div class="image-slideshow image">
+                    <img src="images/slider/slider-1.jpg">
+                </div>
+                <div class="image-slideshow image">
+                    <img src="images/slider/slider-2.jpg">
+                </div>
+                <div class="image-slideshow image">
+                    <img src="images/slider/slider-3.jpg">
+                </div>
+            </div>
+        </div>
+        <!-- Time Ceremony -->
+        <div class="ceremony-time"> 
+            <div class="container">
+                <div class="row">
+                    <h2 class="title">The ceremony begins in:</h2>
+                    <span class="divider"></span>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 timming-countdown">
+                        <ul>
+                            <li>
+                                <div class="digit">   
+                                    <div class="left-digit">0</div>                                    
+                                </div>
+                                <div class="digit">
+                                    <div class="right-digit">0</div>
+                                </div>
+                                <span>WEEKS</span>
+                            </li>
+                            <li>
+                                <div class="digit">   
+                                    <div class="left-digit">0</div>                                    
+                                </div>
+                                <div class="digit">
+                                    <div class="right-digit">0</div>
+                                </div>
+                                <span>DAYS</span>
+                            </li>
+                            <li>
+                                <div class="digit">   
+                                    <div class="left-digit">0</div>                                    
+                                </div>
+                                <div class="digit">
+                                    <div class="right-digit">0</div>
+                                </div>
+                                <span>HOURS</span>
+                            </li>
+                            <li>
+                                <div class="digit">   
+                                    <div class="left-digit">0</div>                                    
+                                </div>
+                                <div class="digit">
+                                    <div class="right-digit">0</div>
+                                </div>
+                                <span>MINUTES</span>
+                            </li>
+                            <li>
+                                <div class="digit">   
+                                    <div class="left-digit">0</div>                                    
+                                </div>
+                                <div class="digit">
+                                    <div class="right-digit">0</div>
+                                </div>
+                                <span>SECONDS</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>           
+            </div>            
+        </div>
+        <!-- Couple images -->
+        <div class="couple-image-info">
+            <div class="container">
+                <div class="row">
+                    <ul class="image-list"> 
+                        <li class="image-item first">
+                            <div class="image first-image">
+                                <div class="image-info">
+                                    <h3>JAMES ELRIC</h3>
+                                    <p>THE GROOM</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="image-item mid">
+                            <div class="image mid-image">
+                                <div class="image-info">
+                                    <h3>MR. AND MRS. ELRIC</h3>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="image-item last">
+                            <div class="image last-image">
+                                <div class="image-info">
+                                    <h3>JESSIE MENDIOA</h3>
+                                    <p>THE BRIDE</p>
+                                </div>
+                            </div>
+                        </li>                                                      
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Love Story -->
+        <div class="love-story">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h2 class="title">Our Love story</h2>
+                        <span class="divider"></span>
+                        <div class="story-details"> 
+                            <div class="row story-details-item">
+                                <div class="col-xs-12 col-lg-2 story-time">
+                                    <div class="story-time-content">Jan, 2011</div>
+                                </div>                        
+                                <div class="col-xs-12 col-lg-10 story-event">
+                                    <div class="arrowpart"></div>
+                                    <div class="story-event-details">
+                                        <h3>First Date</h3>
+                                        <p><span class="first-letter">N</span>am liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+                                        </p>
+                                    </div>                            
+                                </div>  
+                            </div>
+                            <!--  -->
+                            <div class="row story-details-item">
+                                <div class="col-xs-12 col-lg-2 story-time">
+                                    <div class="story-time-content">Feb, 2011</div>
+                                </div>                        
+                                <div class="col-xs-12 col-lg-10 story-event">
+                                    <div class="arrowpart"></div>
+                                    <div class="story-event-details">
+                                        <h3>Second Meeting</h3>
+                                        <p><span class="first-letter">O</span>am liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
+                                        </p>
+                                    </div>                            
+                                </div>  
+                            </div>
+                            <!--  -->
+                            <div class="row story-details-item">
+                                <div class="col-xs-12 col-lg-2 story-time">
+                                    <div class="story-time-content">Mar, 2012</div>
+                                </div>                        
+                                <div class="col-xs-12 col-lg-10 story-event">
+                                    <div class="arrowpart"></div>
+                                    <div class="story-event-details">
+                                        <h3>He played a music for me</h3>
+                                        <p><span class="first-letter">W</span>am liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
+                                        </p>
+                                    </div>                            
+                                </div>  
+                            </div>
+                            <!--  -->
+                            <div class="row story-details-item">
+                                <div class="col-xs-12 col-lg-2 story-time">
+                                    <div class="story-time-content">April, 2012</div>
+                                </div>                        
+                                <div class="col-xs-12 col-lg-10 story-event">
+                                    <div class="arrowpart"></div>
+                                    <div class="story-event-details">
+                                        <h3>Our first picture together</h3>
+                                        <p><span class="first-letter">S</span>am liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
+                                        </p>
+                                    </div>                            
+                                </div>  
+                            </div> 
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+        <!-- View gallery -->
+        <div class="gallery">
+            <div id="gallery-layout-above">
+                <button id="btn-gallery">VIEW GALLERY</button> 
+            </div>  
+            <div id="photostack" class="photostack photostack-transition">              
+                <div id="figure-list">
+                    <figure>
+                        <a>
+                            <img src= "images/galllery/1s.jpg">
+                        </a>
+                        <figcaption>
+                            <h2>Serenity Beach</h2>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <a>
+                            <img src= "images/galllery/2s.jpg">
+                        </a>
+                        <figcaption>
+                            <h2>Happy Days</h2>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <a>
+                            <img src= "images/galllery/3s.jpg">
+                        </a>
+                        <figcaption>
+                            <h2>Beautywood</h2>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <a>
+                            <img src= "images/galllery/4s.jpg">
+                        </a>
+                        <figcaption>
+                            <h2>Heaven of time</h2>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <a>
+                            <img src= "images/galllery/5s.jpg">
+                        </a>
+                        <figcaption>
+                            <h2>Speed Racer</h2>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <a>
+                            <img src= "images/galllery/6s.jpg">
+                        </a>
+                        <figcaption>
+                            <h2>Forever this</h2>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <a>
+                            <img src= "images/galllery/7s.jpg">
+                        </a>
+                        <figcaption>
+                            <h2>Lovely Green</h2>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <a>
+                            <img src= "images/galllery/8s.jpg">
+                        </a>
+                        <figcaption>
+                            <h2>Wonderful</h2>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <a>
+                            <img src= "images/galllery/9s.jpg">
+                        </a>
+                        <figcaption>
+                            <h2>Love Addict</h2>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <a>
+                            <img src= "images/galllery/10s.jpg">
+                        </a>
+                        <figcaption>
+                            <h2>Friendship</h2>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <a>
+                            <img src= "images/galllery/11s.jpg">
+                        </a>
+                        <figcaption>
+                            <h2>White Nights</h2>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <a>
+                            <img src= "images/galllery/12s.jpg">
+                        </a>
+                        <figcaption>
+                            <h2>Serendipity</h2>
+                        </figcaption>
+                    </figure>
+                </div>
+                <nav id="nav-photostack">
+                </nav>
+            </div>
+        </div>
+        <!-- Events -->
+        <div class="event">
+            <div class="container">
+                <div class="row">
+                    <h2 class="title">Events</h2>
+                    <span class="divider"></span>
+                    <div class="event-body">
+                        <div class="col-md-6 event-item">
+                            <h3 class="event-item-heading">Main Ceremony</h3>
+                            <div class="event-item-image">
+                                <a href="#">
+                                    <figure>
+                                        <img src="images/event/event-1.jpg">
+                                        <figcaption>
+                                            <button>VIEW</button>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </div>                            
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i> May 5, 2014</li>
+                                <li><i class="fa fa-clock-o"></i> 3:00pm - 4:00pm</li>
+                                <li><i class="fa fa-building-o"></i> San Sebastian Parish Church</li>
+                            </ul>
+                            <p><span class="first-letter">L</span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <a href="#" class="event-map">View in Google Maps</a>
+                        </div>
+                        <div class="col-md-6 event-item">
+                            <h3 class="event-item-heading">After Party</h3>
+                            <div class="event-item-image">
+                                <a href="#">
+                                    <figure>
+                                        <img src="images/event/event-2.jpg">
+                                        <figcaption>
+                                            <button>VIEW</button>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </div>
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i> May 5, 2014</li>
+                                <li><i class="fa fa-clock-o"></i> 3:00pm - 4:00pm</li>
+                                <li><i class="fa fa-building-o"></i> Carribean Resort, Goldenfield</li>
+                            </ul>
+                            <p><span class="first-letter">S</span>ome ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <a href="#" class="event-map">View in Google Maps</a>
+                        </div>                        
+                    </div>                
+                </div>
+            </div>
+        </div>
+        <!-- Wedding Register Form -->
+        <div class="wedding-register">
+            <div class="container">
+                <div class="row">
+                    <h2 class="title">Don't Forget to RSVP</h2>
+                    <span class="divider"></span>
+                    <form class="register-form">
+                        <div id="register-wedding-form-success">
+                            <span>Contact Form Submitted!</span> We will be in touch soon
+                            <button id="close-register-success-inform" type="button">&#10006</button>
+                        </div>
+                        <div class="form-container col-lg-4 col-lg-offset-4">
+                            <div class="form-group">
+                                <input type="text" placeholder="Name" id="name" required>
+                                <label class="error-description" id="missing-name">Name is required</label>
+                            </div>                        
+                            <div class="form-group radio">
+                                <input type="radio" name="attend-wedding">
+                                <label>Will be there</label>
+                                <input type="radio" name="attend-wedding">
+                                <label>Won't make it</label>
+                                <label class="error-description" id="missing-select-option">Please select an option</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Email" id="email" required>
+                                <label class="error-description" id="missing-email">Email is required</label>
+                            </div>                        
+                            <div class="form-group">
+                                <input type="text" placeholder="No. of guests attending" id="guest" required>
+                                <label class="error-description" id="missing-guest">No. of guests is required</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea type="text" placeholder="Message" id="textarea-message" required></textarea>
+                                <label class="error-description" id="missing-textarea-message">Message is required</label>
+                            </div>
+                            <div class="form-group btn-submit">
+                                <button type="button" id="register-wedding-button">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>            
+        </div>
+        <!-- Gift Registry-->
+        <div class="gift-registry"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-lg-offset-3 gift-content">
+                        <h2 class="title">Gift Registry</h2>
+                        <span class="divider"></span>
+                        <p><span class="first-letter">L</span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="gift-link">
+                            <a href="#"><img src="/images/gift/envato1.png"></a>
+                            <a href="#"><img src="/images/gift/envato1.png"></a>
+                            <a href="#"><img src="/images/gift/envato1.png"></a>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+        <!-- End paragraph -->
+        <div class="end-paragraph">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 end-paragraph-content">
+                        <h2 class="title">You know you're in love when you can't fall asleep because reality is finally better than your dreams.</h2>
+                        <span>Dr. Seuss</span>
+                    </div>
+                </div> 
+            </div>                       
+        </div>
+        <!-- Footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-content">
+                        <span>Crafted with love by <a href="#">falz04</a></span>
+                    </div> 
+                </div>                  
+            </div>                                      
+        </div>
+    </div>
+    <script type="text/javascript" src="/scripts/main.js"></script>
+    <script type="text/javascript" src="/scripts/menu.js"></script>   
+    <script type="text/javascript" src="/scripts/slider.js"></script>
+    <script type="text/javascript" src="/scripts/photostack.js"></script>
+    <script type="text/javascript" src="/scripts/modal-image.js"></script>
+    <script type="text/javascript" src="/scripts/form.js"></script>
+</body>
+</html>
