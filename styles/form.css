@@ -1,9 +1,8 @@
-
-.register-form{
+.form{
     width: 100%;
 }
 
-.register-form .form-group{
+.form-group{
     margin: 0 auto;
     width: 100%;
     margin-bottom: 15px;
@@ -14,7 +13,7 @@
     opacity: 0.55;
 }
 
-.register-form .form-group input{
+.form-group input{
     width: 100%;
     height: 50px;
     border: 2px solid #fff;
@@ -27,35 +26,35 @@
     outline: none;
 }
 
-.register-form .radio{
+.radio{
     text-align: center;
 }
 
-.register-form .form-group .error-description{
+.form-group .error-description{
     width: 100%;
     text-align: center;
     font-weight: bold;
     margin-bottom: 5px;
-    /* display: inline-block; */
+    color: #de6757;
     display: none;
 }
 
-.register-form .form-group input[type="radio"]{
+.form-group input[type="radio"]{
     width: 12.8px;
     height: 12.8px;
     display: inline-block;
 }
 
-.register-form .form-group input:focus{
-    border:2px solid rgb(222, 103, 95);
-    background: #ffffff;
+.form-group input:focus{
+    border: 2px solid rgb(222, 103, 95);
+    background: #ffff;
 }
 
-.register-form .form-group textarea{
+.form-group textarea{
     width: 100%;  
     height: 150px;  
     background: transparent;
-    border: 2px solid #fff;
+    border: 2px solid #ffff;
     padding: 6px 12px;
     font-size: 14px;
     font-weight: 400;
@@ -65,19 +64,20 @@
     display: block;
 }
 
-.register-form .form-group textarea:focus{
+.form-group textarea:focus{
     border:2px solid rgb(222, 103, 95);
-    background: #ffffff;
+    background: #ffff;
 }
 
-.register-form .form-group button{
+.form-group button{
     width: 100%;
-    color: #fff;
+    color: #ffff;
     text-align: center;
     height: 34px;
     background-color: #428bca;
     border: 1px solid #357ebd;
     border-bottom: 3px solid #464D9C;
+    cursor: pointer;
 }
 
 #register-wedding-form-success{
@@ -97,7 +97,7 @@
     font-weight: bold;
 }
 
-#close-register-success-inform{
+#close-success-inform-btn{
     float: right;
     background: transparent;
     border: none;
@@ -107,7 +107,7 @@
     line-height: 22.85px;
 }
 
-#close-register-success-inform:hover{
+#close-success-inform-btn:hover{
     opacity: 0.5;
     cursor: pointer;
 }

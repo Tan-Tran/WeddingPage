@@ -1,0 +1,17 @@
+.end-paragraph{
+    padding: 35px 0px;
+    background-color: #f2f2f2;
+}
+
+.end-paragraph .end-paragraph-content h2{
+    height: auto;
+}
+
+.end-paragraph-content{
+    text-align: center;
+}
+
+.end-paragraph-content h2{
+    margin-top: 20px;
+    margin-bottom: 15px;
+}

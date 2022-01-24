@@ -1,137 +1,135 @@
+const numberOfDot = 6;
+const expandWidth = 100;
 
-createDotListPhotoStack(numberOfDotGallery);
-movePhotoStackRandom();
-clickViewGallery();
-movePhotoStackWhenScreenResize(0);
+photostack();
 
-var dotGallery = {
-    "background": "#aaa",
-    "transform": "scale(0.48)"
+function photostack(){
+    createDotList(numberOfDot);
+    translateAllImagesRandom();
+    photoStackMode();
 }
 
-var dotGallerytAfterClick = {
-    "background": "#de675f",
-    "transform": "scale(1)"
-}
-
-var galleryLayoutAboveAfterClick = {
-    "cursor": "default",
-    "visibility": "hidden",
-    "opacity": 0,
-    "zIndex": 0
-}
-
-function createDotListPhotoStack(numberOfDotGallery){
+function createDotList(numberOfDot){
     let nav = document.getElementById("nav-photostack");
-    for(var i = 0; i < numberOfDotGallery; i++){
+    for(let dotIndex = 0; dotIndex < numberOfDot; dotIndex++){
         let dot = document.createElement("span");
         dot.className = "dot-item";
-        dot.setAttribute("onclick","clickOnDot" + "(" + i + ")");
+        dot.setAttribute("onclick","viewFigure" + "(" + dotIndex + ")");
         nav.appendChild(dot);
     }
 }
 
-function movePhotoStackRandom(){
+function translateAllImagesRandom(){
     let{widthPhotoStack, heightPhotoStack} = getWidthAndHeightPhotoStack();
     let figureList = document.querySelectorAll("#photostack figure");
     figureList.forEach((e) => {
         e.style.transform = "translate(" 
-        + calculateVerticalCoordinateRandomValue(-100, widthPhotoStack + 100) + "px,"
-        + calculateHorizontalCoordinateRandomValue(-100, heightPhotoStack + 100) + "px)"
-        + "rotate(" + calculateRotateDegreeRandom() + "deg)";
+        + randomVerticalCoordinateValue(-expandWidth, widthPhotoStack + expandWidth) + "px,"
+        + randomHorizontalCoordinateValue(-expandWidth, heightPhotoStack + expandWidth) + "px)"
+        + "rotate(" + randomRotateValue() + "deg)";
     })
 }
 
-function clickViewGallery(){
+function photoStackMode(){
     let galleryLayoutAbove = document.getElementById("gallery-layout-above");
-    let isFirstDotReadyOnClick = true;
+    let isFirstDotClicked = true;
     galleryLayoutAbove.addEventListener("click", () => {
-        changeGalleryLayoutAboveAfterClick(galleryLayoutAbove);
-        changeVisibilityButtonGallery("hidden");
-        changeOpacityNavigationPhotoStack(1);
-        if(isFirstDotReadyOnClick){
-            let dots = document.getElementsByClassName("dot-item");
-            changeDotPhotoStackAfterClick(dots[0]);
-            clickOnDot(0);
-            isFirstDotReadyOnClick = false;
+        galleryLayoutAbove.style.cursor = "default";
+        galleryLayoutAbove.style.visibility = "hidden";
+        galleryLayoutAbove.style.opacity = 0;
+        galleryLayoutAbove.style.zIndex = 0;
+        hiddenButtonGallery();
+        setMaxOpacityNavigationPhotoStack();
+        if(isFirstDotClicked){
+            viewFigure(0);
+            isFirstDotClicked = false;
         }    
     });
 }
 
-function movePhotoStackWhenScreenResize(current){
+function translateAllImagesWhenScreenResize(dotIndex){
     window.addEventListener("resize", () => {
-        rotatePhotoStack(current);
+        rotateOtherImage();
+        translateImageCurrentDotToCenter(dotIndex);
     });
 }
 
-function clickOnDot(current){
-    let dots = document.getElementsByClassName("dot-item");
-    if(dots[current].id == ""){
-        for(var i = 0; i < dots.length; i++){
-            resetDefaultDotPhotoStack(dots[i]);
-            dots[i].id = "";
-        }
-        changeDotPhotoStackAfterClick(dots[current]);
-        rotatePhotoStack(current);
-        movePhotoStackToCenter(current);
-        dots[current].id += "active";
+function viewFigure(dotIndex){
+    let dot = document.getElementsByClassName("dot-item")[dotIndex];
+    if(dot.id == ""){
+        resetAllDot();
+        setBackGroundColorDot(dot, "#de675f");
+        setTransformDot(dot, 1);
+        rotateOtherImage(dotIndex);
+        translateImageCurrentDotToCenter(dotIndex);
+        dot.id += "active";
     }
-    movePhotoStackWhenScreenResize(current);
+    translateAllImagesWhenScreenResize(dotIndex);
 }
 
-function rotatePhotoStack(current){
+function resetAllDot(){
+    let dots = document.getElementsByClassName("dot-item");
+    for(let i = 0; i < dots.length; i++){
+        setBackGroundColorDot(dots[i], "#aaa");
+        setTransformDot(dots[i], 0.48);
+        dots[i].id = "";
+    }
+}
+
+function rotateOtherImage(){
     let figureList = document.querySelectorAll("#photostack figure");
-    for(var i = 0; i < figureList.length; i++){
+    for(let i = 0; i < figureList.length; i++){
         figureList[i].style.transform = "translate("
          + calculateTranslateXValuePhotoStack() + "px,"
          + calculateTranslateYValuePhotoStack() + "px)" + "rotate(" 
-         + calculateRotateDegreeRandom() + "deg)";
+         + randomRotateValue() + "deg)";
     }
-    movePhotoStackToCenter(current);
 }
 
-function createRandomValue(min, max){
+function getRandomValue(min, max){
     return (Math.random() * (max - min + 1)) + min;
 }
 
 function calculateTranslateXValuePhotoStack(){
-    let widthPhotoStack = getWidthAndHeightPhotoStack().widthPhotoStack;
-    let min = -100;
-    let max = widthPhotoStack + 100;
-    let randomValue = createRandomValue(min, max);
+    let figure = document.querySelectorAll("#photostack figure")[0];
+    let {widthPhotoStack} = getWidthAndHeightPhotoStack();
+    let min = - expandWidth;
+    let max = widthPhotoStack + expandWidth;
+    let randomValue = getRandomValue(min, max);
     if(randomValue > (widthPhotoStack/2 - widthPhotoStack/3)){
-        randomValue = randomValue -  widthPhotoStack/3 - 160;
+        randomValue = randomValue -  widthPhotoStack/3 - figure.clientWidth/2;
     }
     if(randomValue < (widthPhotoStack/2 + widthPhotoStack/3) && randomValue > (widthPhotoStack/2 - widthPhotoStack/3)){
-        randomValue = randomValue + widthPhotoStack/3 + 160;
+        randomValue = randomValue + widthPhotoStack/3 + figure.clientWidth/2;
     }
     return randomValue;    
 }
 
-function calculateTranslateYValuePhotoStack(){
-    let heightPhotoStack = getWidthAndHeightPhotoStack().heightPhotoStack;
-    let min = -100;
-    let max = heightPhotoStack + 100;
-    return calculateHorizontalCoordinateRandomValue(min, max);
+function calculateTranslateYValuePhotoStack(){  
+    let {heightPhotoStack} = getWidthAndHeightPhotoStack();
+    let min = - expandWidth;
+    let max = heightPhotoStack + expandWidth;
+    return randomHorizontalCoordinateValue(min, max);
 }
 
-function calculateRotateDegreeRandom(){
-    return createRandomValue(-1,1) * 20;
+function randomRotateValue(){
+    return getRandomValue(-1,1) * 20;
 }
 
-function movePhotoStackToCenter(current){
+function translateImageCurrentDotToCenter(dotIndex){
     let figureList = document.querySelectorAll("#photostack figure");
     let {horizontalCenter, verticalCenter, nonRotate} = calculateCoordinateCenterPhotoStack();
-    figureList[current].style.transform = "translate("
+    figureList[dotIndex].style.transform = "translate("
          + horizontalCenter + "px,"
          + verticalCenter + "px)" + "rotate(" 
          + nonRotate + "deg)";
 }
 
 function calculateCoordinateCenterPhotoStack(){
+    let figure = document.querySelectorAll("#photostack figure")[0];
     let{widthPhotoStack, heightPhotoStack} = getWidthAndHeightPhotoStack();
-    let horizontalCenter = widthPhotoStack/2 - 160;
-    let verticalCenter = heightPhotoStack/2 - 180;
+    let horizontalCenter = widthPhotoStack/2 - figure.clientWidth/2;
+    let verticalCenter = heightPhotoStack/2 - figure.clientHeight/2;
     let nonRotate = 0;
     return { 
         horizontalCenter: horizontalCenter, 
@@ -150,45 +148,31 @@ function getWidthAndHeightPhotoStack(){
     }
 }
 
-function calculateVerticalCoordinateRandomValue(minValue, maxValue){
-    return createRandomValue(minValue, maxValue)
+function randomVerticalCoordinateValue(minValue, maxValue){
+    return getRandomValue(minValue, maxValue)
 }
 
-function calculateHorizontalCoordinateRandomValue(minValue, maxValue){
-    return createRandomValue(minValue, maxValue)
+function randomHorizontalCoordinateValue(minValue, maxValue){
+    return getRandomValue(minValue, maxValue)
 }
 
 
-function changeVisibilityButtonGallery(value){
+function hiddenButtonGallery(){
     let btn = document.getElementById("btn-gallery");
-    btn.style.visibility = value;
+    btn.style.visibility = "hidden";
 }
 
-function changeOpacityNavigationPhotoStack(value){
+function setMaxOpacityNavigationPhotoStack(){
     let nav = document.getElementById("nav-photostack");
-    nav.style.opacity = value;
+    nav.style.opacity = 1;
 }
 
-
-function changeDotPhotoStackAfterClick(dot){
-    dot.style.background = dotGallerytAfterClick.background;
-    dot.style.transform = dotGallerytAfterClick.transform;
+function setBackGroundColorDot(dot, value){
+    dot.style.background = value;
 }
 
-function changeFirstDotPhotoStackAfterGalleryClick(){
-    let dots = document.getElementsByClassName("dot-item");
-    changeDotPhotoStackAfterClick(dots[0]);
+function setTransformDot(dot, value){
+    dot.style.transform = "scale(" + value + ")";
 }
 
-function resetDefaultDotPhotoStack(dot){
-    dot.style.background = dotGallery.background;
-    dot.style.transform = dotGallery.transform;
-}
-
-function changeGalleryLayoutAboveAfterClick(galleryLayoutAbove){
-    galleryLayoutAbove.style.cursor = galleryLayoutAboveAfterClick.cursor;
-    galleryLayoutAbove.style.visibility = galleryLayoutAboveAfterClick.visibility;
-    galleryLayoutAbove.style.opacity = galleryLayoutAboveAfterClick.opacity;
-    galleryLayoutAbove.style.zIndex = galleryLayoutAboveAfterClick.zIndex;
-}
-
+// export default photostack;

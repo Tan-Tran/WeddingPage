@@ -6,52 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="styles/main.css"/>
-    <link rel="stylesheet" href="styles/menu.css"/>
+    <link rel="stylesheet" href="styles/slider.css"/>
+    <link rel="stylesheet" href="styles/sidebar.css"/>
+    <link rel="stylesheet" href="styles/time-ceremony.css"/>
+    <link rel="stylesheet" href="styles/couple-image.css"/>
+    <link rel="stylesheet" href="styles/love-story.css"/>
+    <link rel="stylesheet" href="styles/gallery.css"/>
+    <link rel="stylesheet" href="styles/event.css"/>
+    <link rel="stylesheet" href="styles/wedding-form.css"/>
+    <link rel="stylesheet" href="styles/gift-registry.css"/>
+    <link rel="stylesheet" href="styles/end-paragraph.css"/>
     <link rel="stylesheet" href="styles/footer.css"/>
     <link rel="stylesheet" href="styles/form.css"/>
     <link rel="stylesheet" href="styles/modal-image.css"/>
-    <link rel="stylesheet" href="styles/common.css"/>
+    <link rel="stylesheet" href="styles/base.css"/>
     <link rel="stylesheet" href="styles/responsive.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Niconne&family=Pacifico&family=Raleway:wght@100;300;400;600;700;800;900;950&family=Roboto+Slab:wght@100;300;400;600;700;800;900;950&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="main">
-        <!-- Model Image PhotoStack -->
-        <div class="modal-photostack-overlay" ></div>
-        <div class="modal-photostack-container">
-            <div class="modal-photostack-layout-above"></div>
-            <div class="modal-photostack-content">
-                <button class="close-btn" >&#10006</button>
-                <img src = "" class="image-modal-photostack">
-                <div class="imge-counter"></div>
-                <div class="preloader-title"></div>
-            </div>
-            <button title="Previous (Left arrow key)" class="pre-btn" onclick="nextModalImage(-1)">❮</button>
-            <button title="Next (Right arrow key)" class="next-btn" onclick="nextModalImage(1)">❯</button>
-        </div>
-        <!-- Menu-->
-        <div id ="menu">
-            <div id="menu-nav">
-                <div id="menu-nav-item">
+        <div id ="sidebar">
+            <div id="sidebar-nav">
+                <div id="sidebar-nav-item">
                     <h1><a href="#">EVER AFTER</a></h1>
                     <a href="#">HOME</a>
-                    <a href="#">OUR LOVE STORY</a>
-                    <a href="#">GALLERY</a>
-                    <a href="#">EVENTS</a>
-                    <a href="#">RSVP</a>
-                    <a href="#">GIFTS</a>
+                    <a href="#love-story">OUR LOVE STORY</a>
+                    <a href="#gallery">GALLERY</a>
+                    <a href="#event">EVENTS</a>
+                    <a href="#wedding-register">RSVP</a>
+                    <a href="#gift-registry">GIFTS</a>
                 </div>
                 <a href="#"><i class="fa fa-facebook"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
                 <a href="#"><i class="fa fa-dribbble"></i></a>
                 <a href="#"><i class="fa fa-envelope"></i></a>
             </div>
-            <div id="menu-icon">
+            <div id="sidebar-icon">
                 <i class="fa fa-heart"></i>
             </div>
         </div>
-        <!-- Slider -->
         <div class="wedding-image-slider">
             <div class="container">
                 <br>
@@ -61,18 +53,17 @@
             <div class="wedding-image-dot-background"></div>
             <div class="wedding-image-slideshow ">
                 <div class="image-slideshow image">
-                    <img src="images/slider/slider-1.jpg">
+                    <img src="../images/slider/slider-1.jpg">
                 </div>
                 <div class="image-slideshow image">
-                    <img src="images/slider/slider-2.jpg">
+                    <img src="../images/slider/slider-2.jpg">
                 </div>
                 <div class="image-slideshow image">
-                    <img src="images/slider/slider-3.jpg">
+                    <img src="../images/slider/slider-3.jpg">
                 </div>
             </div>
         </div>
-        <!-- Time Ceremony -->
-        <div class="ceremony-time"> 
+        <div class="ceremony-time" id="ceremony-time"> 
             <div class="container">
                 <div class="row">
                     <h2 class="title">The ceremony begins in:</h2>
@@ -131,12 +122,11 @@
                 </div>           
             </div>            
         </div>
-        <!-- Couple images -->
         <div class="couple-image-info">
             <div class="container">
                 <div class="row">
                     <ul class="image-list"> 
-                        <li class="image-item first">
+                        <li class="h-220 w-220 image-item">
                             <div class="image first-image">
                                 <div class="image-info">
                                     <h3>JAMES ELRIC</h3>
@@ -144,14 +134,14 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="image-item mid">
+                        <li class="h-250 w-250 image-item">
                             <div class="image mid-image">
                                 <div class="image-info">
                                     <h3>MR. AND MRS. ELRIC</h3>
                                 </div>
                             </div>
                         </li>
-                        <li class="image-item last">
+                        <li class="h-220 w-220 image-item">
                             <div class="image last-image">
                                 <div class="image-info">
                                     <h3>JESSIE MENDIOA</h3>
@@ -163,8 +153,7 @@
                 </div>
             </div>
         </div>
-        <!-- Love Story -->
-        <div class="love-story">
+        <div class="love-story" id="love-story">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
@@ -184,7 +173,6 @@
                                     </div>                            
                                 </div>  
                             </div>
-                            <!--  -->
                             <div class="row story-details-item">
                                 <div class="col-xs-12 col-lg-2 story-time">
                                     <div class="story-time-content">Feb, 2011</div>
@@ -198,7 +186,6 @@
                                     </div>                            
                                 </div>  
                             </div>
-                            <!--  -->
                             <div class="row story-details-item">
                                 <div class="col-xs-12 col-lg-2 story-time">
                                     <div class="story-time-content">Mar, 2012</div>
@@ -212,7 +199,6 @@
                                     </div>                            
                                 </div>  
                             </div>
-                            <!--  -->
                             <div class="row story-details-item">
                                 <div class="col-xs-12 col-lg-2 story-time">
                                     <div class="story-time-content">April, 2012</div>
@@ -231,16 +217,15 @@
                 </div>                
             </div>
         </div>
-        <!-- View gallery -->
-        <div class="gallery">
-            <div id="gallery-layout-above">
+        <div class="gallery" id="gallery">
+            <div id="gallery-layout-above" class="d-flex justify-content-center align-items-center">
                 <button id="btn-gallery">VIEW GALLERY</button> 
             </div>  
             <div id="photostack" class="photostack photostack-transition">              
                 <div id="figure-list">
                     <figure>
                         <a>
-                            <img src= "images/galllery/1s.jpg">
+                            <img src= "../images/gallery/1s.jpg">
                         </a>
                         <figcaption>
                             <h2>Serenity Beach</h2>
@@ -248,7 +233,7 @@
                     </figure>
                     <figure>
                         <a>
-                            <img src= "images/galllery/2s.jpg">
+                            <img src= "../images/gallery/2s.jpg">
                         </a>
                         <figcaption>
                             <h2>Happy Days</h2>
@@ -256,7 +241,7 @@
                     </figure>
                     <figure>
                         <a>
-                            <img src= "images/galllery/3s.jpg">
+                            <img src= "../images/gallery/3s.jpg">
                         </a>
                         <figcaption>
                             <h2>Beautywood</h2>
@@ -264,7 +249,7 @@
                     </figure>
                     <figure>
                         <a>
-                            <img src= "images/galllery/4s.jpg">
+                            <img src= "../images/gallery/4s.jpg">
                         </a>
                         <figcaption>
                             <h2>Heaven of time</h2>
@@ -272,7 +257,7 @@
                     </figure>
                     <figure>
                         <a>
-                            <img src= "images/galllery/5s.jpg">
+                            <img src= "../images/gallery/5s.jpg">
                         </a>
                         <figcaption>
                             <h2>Speed Racer</h2>
@@ -280,7 +265,7 @@
                     </figure>
                     <figure>
                         <a>
-                            <img src= "images/galllery/6s.jpg">
+                            <img src= "../images/gallery/6s.jpg">
                         </a>
                         <figcaption>
                             <h2>Forever this</h2>
@@ -288,7 +273,7 @@
                     </figure>
                     <figure>
                         <a>
-                            <img src= "images/galllery/7s.jpg">
+                            <img src= "../images/gallery/7s.jpg">
                         </a>
                         <figcaption>
                             <h2>Lovely Green</h2>
@@ -296,7 +281,7 @@
                     </figure>
                     <figure>
                         <a>
-                            <img src= "images/galllery/8s.jpg">
+                            <img src= "../images/gallery/8s.jpg">
                         </a>
                         <figcaption>
                             <h2>Wonderful</h2>
@@ -304,7 +289,7 @@
                     </figure>
                     <figure>
                         <a>
-                            <img src= "images/galllery/9s.jpg">
+                            <img src= "../images/gallery/9s.jpg">
                         </a>
                         <figcaption>
                             <h2>Love Addict</h2>
@@ -312,7 +297,7 @@
                     </figure>
                     <figure>
                         <a>
-                            <img src= "images/galllery/10s.jpg">
+                            <img src= "../images/gallery/10s.jpg">
                         </a>
                         <figcaption>
                             <h2>Friendship</h2>
@@ -320,7 +305,7 @@
                     </figure>
                     <figure>
                         <a>
-                            <img src= "images/galllery/11s.jpg">
+                            <img src= "../images/gallery/11s.jpg">
                         </a>
                         <figcaption>
                             <h2>White Nights</h2>
@@ -328,7 +313,7 @@
                     </figure>
                     <figure>
                         <a>
-                            <img src= "images/galllery/12s.jpg">
+                            <img src= "../images/gallery/12s.jpg">
                         </a>
                         <figcaption>
                             <h2>Serendipity</h2>
@@ -339,8 +324,19 @@
                 </nav>
             </div>
         </div>
-        <!-- Events -->
-        <div class="event">
+        <div class="modal-photostack-overlay"></div>
+        <div class="modal-photostack-container">
+            <div class="modal-photostack-layout-above"></div>
+            <div class="modal-photostack-content">
+                <button class="close-btn">&#10006</button>
+                <img src = "" class="image-modal-photostack">
+                <div class="modal-counter"></div>
+                <div class="modal-error-title"></div>
+            </div>
+            <button title="Previous (Left arrow key)" class="pre-btn" onclick="nextModal(-1)">❮</button>
+            <button title="Next (Right arrow key)" class="next-btn" onclick="nextModal(1)">❯</button>
+        </div>
+        <div class="event" id="event">
             <div class="container">
                 <div class="row">
                     <h2 class="title">Events</h2>
@@ -351,7 +347,7 @@
                             <div class="event-item-image">
                                 <a href="#">
                                     <figure>
-                                        <img src="images/event/event-1.jpg">
+                                        <img src="../images/event/event-1.jpg">
                                         <figcaption>
                                             <button>VIEW</button>
                                         </figcaption>
@@ -371,7 +367,7 @@
                             <div class="event-item-image">
                                 <a href="#">
                                     <figure>
-                                        <img src="images/event/event-2.jpg">
+                                        <img src="../images/event/event-2.jpg">
                                         <figcaption>
                                             <button>VIEW</button>
                                         </figcaption>
@@ -390,51 +386,49 @@
                 </div>
             </div>
         </div>
-        <!-- Wedding Register Form -->
-        <div class="wedding-register">
+        <div class="wedding-register" id="wedding-register">
             <div class="container">
                 <div class="row">
                     <h2 class="title">Don't Forget to RSVP</h2>
                     <span class="divider"></span>
-                    <form class="register-form">
+                    <form class="register-form form" action="#wedding-register" id="wedding-form">
                         <div id="register-wedding-form-success">
                             <span>Contact Form Submitted!</span> We will be in touch soon
-                            <button id="close-register-success-inform" type="button">&#10006</button>
+                            <button id="close-success-inform-btn" type="button">&#10006</button>
                         </div>
                         <div class="form-container col-lg-4 col-lg-offset-4">
                             <div class="form-group">
-                                <input type="text" placeholder="Name" id="name" required>
+                                <input type="text" placeholder="Name" id="name">
                                 <label class="error-description" id="missing-name">Name is required</label>
                             </div>                        
                             <div class="form-group radio">
                                 <input type="radio" name="attend-wedding">
                                 <label>Will be there</label>
-                                <input type="radio" name="attend-wedding">
+                                <input type="radio" name="attend-wedding"> 
                                 <label>Won't make it</label>
                                 <label class="error-description" id="missing-select-option">Please select an option</label>
                             </div>
                             <div class="form-group">
-                                <input type="text" placeholder="Email" id="email" required>
-                                <label class="error-description" id="missing-email">Email is required</label>
+                                <input type="text" placeholder="Email" id="email">
+                                <label class="error-description" id="error-email">Email is required</label>
                             </div>                        
                             <div class="form-group">
-                                <input type="text" placeholder="No. of guests attending" id="guest" required>
+                                <input type="text" placeholder="No. of guests attending" id="guest">
                                 <label class="error-description" id="missing-guest">No. of guests is required</label>
                             </div>
                             <div class="form-group">
-                                <textarea type="text" placeholder="Message" id="textarea-message" required></textarea>
+                                <textarea type="text" placeholder="Message" id="textarea-message"></textarea>
                                 <label class="error-description" id="missing-textarea-message">Message is required</label>
                             </div>
                             <div class="form-group btn-submit">
-                                <button type="button" id="register-wedding-button">Submit</button>
+                                <button type="submit" id="register-wedding-button">Submit</button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>            
         </div>
-        <!-- Gift Registry-->
-        <div class="gift-registry"> 
+        <div class="gift-registry" id="gift-registry"> 
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-lg-offset-3 gift-content">
@@ -442,15 +436,14 @@
                         <span class="divider"></span>
                         <p><span class="first-letter">L</span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         <div class="gift-link">
-                            <a href="#"><img src="/images/gift/envato1.png"></a>
-                            <a href="#"><img src="/images/gift/envato1.png"></a>
-                            <a href="#"><img src="/images/gift/envato1.png"></a>
+                            <a href="#"><img src="../images/gift/envato1.png"></a>
+                            <a href="#"><img src="../images/gift/envato1.png"></a>
+                            <a href="#"><img src="../images/gift/envato1.png"></a>
                         </div>
                     </div>
                 </div>                
             </div>
         </div>
-        <!-- End paragraph -->
         <div class="end-paragraph">
             <div class="container">
                 <div class="row">
@@ -461,7 +454,6 @@
                 </div> 
             </div>                       
         </div>
-        <!-- Footer -->
         <div class="footer">
             <div class="container">
                 <div class="row">
@@ -472,11 +464,11 @@
             </div>                                      
         </div>
     </div>
-    <script type="text/javascript" src="/scripts/main.js"></script>
-    <script type="text/javascript" src="/scripts/menu.js"></script>   
-    <script type="text/javascript" src="/scripts/slider.js"></script>
-    <script type="text/javascript" src="/scripts/photostack.js"></script>
-    <script type="text/javascript" src="/scripts/modal-image.js"></script>
-    <script type="text/javascript" src="/scripts/form.js"></script>
+    <script type="text/javascript" src="../scripts/sidebar.js"></script>   
+    <script type="text/javascript" src="../scripts/slider.js"></script>
+    <script type="text/javascript" src="../scripts/photostack.js"></script>
+    <script type="text/javascript" src="../scripts/gallery.js"></script>
+    <script type="text/javascript" src="../scripts/form.js"></script>
+    <!-- <script type="text/javascript" src="../scripts/main.js"></script> -->
 </body>
 </html>

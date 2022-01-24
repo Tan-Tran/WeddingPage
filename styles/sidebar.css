@@ -1,4 +1,4 @@
-#menu{
+#sidebar{
     position: fixed;
     top: 0;
     right: -200px;
@@ -8,7 +8,7 @@
     transition: all 0.4s;
 }
 
-#menu a{
+#sidebar a{
     margin-left: 20px;
     color: #fff;
     display: block;
@@ -18,13 +18,13 @@
     letter-spacing: 0.1em;
 }
 
-#menu a:hover{
+#sidebar a:hover{
     color: #ddd;
 }
 
-/* menu-nav */
+/* sidebar-nav */
 
-#menu-nav{
+#sidebar-nav{
     position: absolute;
     background-color: #de675f;
     top: 0;
@@ -33,7 +33,7 @@
     width: 200px;
 }
 
-#menu-nav-item{
+#sidebar-nav-item{
     color: #fff;
     display: block;
     font-size: 12px;
@@ -41,13 +41,13 @@
     line-height: 40px;
 }
 
-#menu-nav-item h1{
+#sidebar-nav-item h1{
     text-align: center;
 }
 
-/* menu-icon */
+/* sidebar-icon */
 
-#menu-icon{
+#sidebar-icon{
     position: absolute;
     left: 0px;
     top: 20px;
@@ -61,42 +61,42 @@
     cursor: pointer;
 }
 
-#menu-icon:hover{
+#sidebar-icon:hover{
     color: #ffffff;
     background: rgba(0,0,0,0.2);
 }
 
-/* menu-nav contains 2 part: menu-nav-items and nav-icon */
+/* sidebar-nav contains 2 part: sidebar-nav-items and nav-icon */
 
-/* menu-nav-items */
+/* sidebar-nav-items */
 
-#menu-nav-item{
+#sidebar-nav-item{
     display: flex;
     flex-wrap: wrap;
     width: 200px;    
 }
 
-#menu-nav-item h1{
+#sidebar-nav-item h1{
     width: 200px;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-#menu-nav-item h1 a:hover{
+#sidebar-nav-item h1 a:hover{
     color:#f85c37;
 }
 
-#menu-nav-item h1 a{
+#sidebar-nav-item h1 a{
     letter-spacing: 0.15em;
     font-size: 16px;
     font-family: 'Raleway';
 }
 
-#menu-nav-item a{
+#sidebar-nav-item a{
     width: 180px;
 }
 
-#menu-nav a > i{
+#sidebar-nav a > i{
     float: left;
     width: 25px;
     font-size: 14px;

@@ -51,6 +51,7 @@
     position: relative;
     height: 100%;
     width: 100%;
+    cursor: zoom-out;
 }
 
 .modal-photostack-content{
@@ -90,7 +91,7 @@
     opacity: 1;
 }
 
-.modal-photostack-content .imge-counter{
+.modal-photostack-content .modal-counter{
     position: absolute;
     margin-top: -36px;
     left: 0;
@@ -101,7 +102,7 @@
     line-height: 18px;
 }
 
-.modal-photostack-content .preloader-title{
+.modal-photostack-content .modal-error-title{
     width: 100%;
     text-align: center;
     color: #cccccc;

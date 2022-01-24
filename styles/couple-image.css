@@ -1,0 +1,98 @@
+.couple-image-info{
+    position: relative;
+    padding: 35px 0px;
+    background-color: #f2f2f2;
+}
+
+
+.couple-image-info .image-list{
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+    list-style: none;
+}
+
+.couple-image-info .image-item{
+    margin: 20px;
+    display: inline-block;
+}
+
+.couple-image-info .image-list .image{
+    position: relative;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 16px rgb(255 255 255 / 60%), 0 1px 2px rgb(0 0 0 / 10%);
+    transition: all 0.4s ease-in-out;
+
+}
+
+.couple-image-info .image-list .image:hover{
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 60%), 0 1px 2px rgb(0 0 0 / 10%);
+
+}
+
+.couple-image-info .image-list .first-image{
+    background: url(../images/couple/groom.jpg);
+    
+}
+
+.couple-image-info .image-list .mid-image{
+    background: url(../images/couple/couple.jpg);
+}
+
+.couple-image-info .image-list .last-image{
+    background: url(../images/couple/bride.jpg);
+}
+
+.couple-image-info .image .image-info{
+    position: absolute;
+    background: rgba(222, 103, 95, 0.8);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.4s ease-in-out;
+}
+
+.couple-image-info .image:hover .image-info{
+    transform: scale(1);
+    opacity: 1;
+}
+
+.couple-image-info .image-info h3{
+    color: #ffff;
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1.1;
+    margin: 0 30px;
+    padding: 90px 0 0 0;
+    height: 140px;
+    font-family: 'Open Sans',Arial, sans-serif;
+    text-shadow: 0 0 1px #ffff, 0 1px 2px rgb(0 0 0 / 30%);
+}
+
+.couple-image-info .image-info p{
+    text-align: left;
+    color: #ffff;
+    padding: 10px 5px;
+    font-style: italic;
+    margin: 0 30px;
+    font-size: 12px;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    line-height: 28px;
+    font-weight: 500;
+    opacity: 0;
+    transition: all 1s ease-in-out 0.4s;
+}
+
+.couple-image-info .image:hover p{
+    opacity: 1;
+    text-align: center;
+}

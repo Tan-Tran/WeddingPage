@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Niconne&family=Pacifico&family=Raleway:wght@100;300;400;600;700;800;900;950&family=Roboto+Slab:wght@100;300;400;600;700;800;900;950&display=swap");
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -38,13 +40,6 @@ a{
     padding: 0px 15px;
 }
 
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
-}
-
 h1, h2{
     font-weight: 300;
     font-size: 30px;
@@ -64,11 +59,39 @@ h1, h2{
 
 .divider{
     width: 100%;
-    background: url(/images/divider/main-nav-divider.png) no-repeat center top;
+    background: url(../images/divider/main-nav-divider.png) no-repeat center top;
     width: 100%;
     height: 40px;
     margin-top: -1px;
     margin-bottom: 16px;
     padding: 0px 0px 40px;
     display: block;
+}
+
+.h-220{
+    height: 220px;
+}
+
+.w-220{
+    width: 220px;
+}
+
+.h-250{
+    height: 250px;
+}
+
+.w-250{
+    width: 250px;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.align-items-center{
+    align-items: center;
 }

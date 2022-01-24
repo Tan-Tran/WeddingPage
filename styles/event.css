@@ -1,0 +1,108 @@
+.event{
+    position: relative;
+    background: #ffffff;
+}
+
+.event .event-body .event-item{
+    margin-bottom: 30px;
+}
+
+.event .event-body .event-item-image{
+    margin: 10px auto 10px;
+}
+
+.event-body .event-item h3{
+    font-size: 24px;
+    margin: 20px 0px 10px;
+    text-align: center;
+    font-family: "Raleway";
+    font-weight: 700;
+    line-height: 1.1;
+    color: #7b7b7b;
+    letter-spacing: 1px;
+}
+
+.event-body .event-item-image a{
+    position: relative;
+    display: block;
+    margin: 0 0 10px;
+    overflow: hidden;
+}
+
+.event-body .event-item-image a:hover img{
+    opacity: 1;
+} 
+
+.event-body .event-item-image figure{
+    position: relative;
+    margin: 5px;
+    background-color: #333;
+}
+
+.event-body .event-item-image img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    transition: opacity 0.4s;
+}
+
+.event-body .event-item-image figcaption{
+    position: absolute;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.event-body .event-item button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border: 3px solid #fff;
+    background: transparent;
+    color: #fff;
+    padding: 4px 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Roboto Slab";
+    font-size: 16px;
+    line-height: 1.428571429;
+    transition: all 0.4s;
+}
+
+.event-body .event-item-image a:hover button{
+    transform: translate(-50%, -50%) scale(1);
+} 
+
+.event-body .event-item ul{
+    width: 100%;
+    list-style: none;  
+    color: #6f6f6f;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+.event-body .event-item li{
+    margin-right: 18px;    
+    font-size: 16px;
+    font-family: "Roboto Slab";
+    display: inline-block;
+}
+
+.event-body .event-item p{
+    text-align: justify;
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.event-body .event-item .event-map{
+    text-decoration: none;
+    color: #de675f;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+}

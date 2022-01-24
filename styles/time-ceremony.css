@@ -1,0 +1,55 @@
+.ceremony-time{
+    width: 100%;
+    padding: 35px 0px;
+    text-align: center;
+    background: #ffffff;
+    position: relative;
+}
+
+.ceremony-time .timming-countdown ul{
+    margin-bottom: 10px;
+}
+
+.ceremony-time .timming-countdown li:before, li:after{
+    content: "";
+    display: table;
+}
+
+.ceremony-time .timming-countdown li::after{
+    clear: both;
+}
+
+.ceremony-time .timming-countdown ul{
+    list-style: none;
+}
+
+.ceremony-time .timming-countdown li{
+    width: 110px;
+    height: 114px;
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+
+}
+
+.ceremony-time .timming-countdown .digit{
+    font-size: 52pt;
+    font-weight: bold;
+    float: left;
+    width: 55px;
+    text-align: center;
+    font-family: "Roboto Slab";
+    color: #6f6f6f;
+    position: relative;
+}
+
+.ceremony-time .timming-countdown span{
+    float: right;    
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    right: 6px;
+    font-size: 9pt;
+    color: #6f6f6f;
+    letter-spacing: 2px;
+}
