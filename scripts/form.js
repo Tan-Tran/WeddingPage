@@ -16,6 +16,11 @@ function submitForm(){
 }
 
 function validateForm(){
+    validateInputNameWeddingForm();
+    validateSelectOptionWeddingForm();
+    validateInputEmailWeddingForm();
+    validateInputGuestWeddingForm();
+    validateTextAreaWeddingForm();
     if(
     validateInputNameWeddingForm() &&
     validateSelectOptionWeddingForm() &&
